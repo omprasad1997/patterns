@@ -4,7 +4,7 @@ package patterns;
 //https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/blob/main/assignments/09-patterns.md
 public class Patterns {
     public static void main(String[] args) {
-        pattern29(5);
+        pattern20(5);
     }
 
     static void pattern1(int n) {
@@ -121,6 +121,33 @@ public class Patterns {
                 System.out.print(col + " ");
             }
 
+            System.out.println();
+        }
+    }
+
+//            ****
+//            *  *
+//            *  *
+//            *  *
+//            ****
+    static void pattern20(int n){
+        for (int row = 1; row <= n; row++) {
+            //for every row,run col
+            if(row == 1 || row == n){
+                for (int col = 1; col <= n-1; col++) {
+                    System.out.print("* ");
+                }
+            } else {
+                for (int col = 1; col <= n-1; col++) {
+                    if(col == 1 || col == n-1){
+                        System.out.print("* ");
+                    }else {
+                        System.out.print("  ");
+                    }
+                }
+            }
+
+            //when one row is printed, add new a line
             System.out.println();
         }
     }
