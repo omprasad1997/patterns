@@ -167,19 +167,14 @@ public class Patterns {
             }
 
             for(int col = 1; col <= row; col++){
+                String num = "1 ";
                 if(start == 1){
-                    if(col % 2 != 0) {
-                        System.out.print("1 ");
-                    } else {
-                        System.out.print("0 ");
-                    }
+                    num = col % 2 != 0 ? "1 " : "0 "; //ternary operator
                 } else {
-                    if(col % 2 != 0) {
-                        System.out.print("0 ");
-                    } else {
-                        System.out.print("1 ");
-                    }
+                    num = col % 2 != 0 ? "0 " : "1 ";
                 }
+
+                System.out.print(num);
             }
             System.out.println();
         }
