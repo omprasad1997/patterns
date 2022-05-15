@@ -166,24 +166,18 @@ public class Patterns {
                 start = 0;
             }
 
-            boolean hasCheckedOddIndex = false;
-
             for(int col = 1; col <= row; col++){
                 if(start == 1){
-                    if(!hasCheckedOddIndex) {
+                    if(col % 2 != 0) {
                         System.out.print("1 ");
-                        hasCheckedOddIndex = true;
                     } else {
                         System.out.print("0 ");
-                        hasCheckedOddIndex = false;
                     }
                 } else {
-                    if(!hasCheckedOddIndex) {
+                    if(col % 2 != 0) {
                         System.out.print("0 ");
-                        hasCheckedOddIndex = true;
                     } else {
                         System.out.print("1 ");
-                        hasCheckedOddIndex = false;
                     }
                 }
             }
